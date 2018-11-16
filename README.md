@@ -171,7 +171,7 @@ If you are using a desktop environment (Pixel, Mate, LXDE, etc) or using remote 
 
 ![](http://www.thomasjacquin.com/allsky-portal/screenshots/camera-settings.jpg)
 
-If you don't want to configure the camera using the terminal, you can install the web based [graphical interface](https://github.com/thomasjacquin/allsky-portal).
+If you don't want to configure the camera using the terminal, you can install the web based [graphical interface](https://github.com/jeremyamoore/allsky-portal).
 Please note that this will change your hostname to allsky, install lighttpd and replace your /var/www/html directory. It will also move settings.json to /var/www/html.
 
 ```shell
