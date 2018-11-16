@@ -200,8 +200,6 @@ http://your_raspberry_IP/public.php
 
 ## Dark frame subtraction
 
-![](http://www.thomasjacquin.com/allsky-portal/screenshots/darkframe.jpg)
-
 The dark frame subtraction feature was implemented to remove hot pixels from night sky images. The concept is the following: Take an image with a cover on your camera lens and subtract that image later to all images taken throughout the night.
 
 You only need to follow these instructions once.
