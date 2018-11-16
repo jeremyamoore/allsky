@@ -1,9 +1,9 @@
 # Allsky Camera ![Release 0.6](https://img.shields.io/badge/Release-0.6-green.svg)
 
 
-This is the source code for the Wireless Allsky Camera project described [on Instructables](http://www.instructables.com/id/Wireless-All-Sky-Camera/).
+This is a fork of the source code for the Wireless Allsky Camera project described [on Instructables](http://www.instructables.com/id/Wireless-All-Sky-Camera/).
 
-![](http://www.thomasjacquin.com/allsky-portal/screenshots/camera-header-photo.jpg)
+![](docs/startrails-20181022.jpg)
 
 ## Requirements
 
