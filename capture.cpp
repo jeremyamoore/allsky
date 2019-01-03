@@ -131,7 +131,6 @@ void calculateDayOrNight(const char* latitude, const char* longitude, const char
 	sunwaitCommand.append(" ");
 	sunwaitCommand.append(longitude);
 	dayOrNight = exec(sunwaitCommand.c_str());
-	dayOrNight = exec(sunwaitCommand.c_str());
 	dayOrNight.erase(std::remove(dayOrNight.begin(), dayOrNight.end(), '\n'), dayOrNight.end());
 }
 
@@ -221,12 +220,10 @@ int  main(int argc, char* argv[])
   printf("-Yang and Sam from ZWO\n");
   printf("-Robert Wagner\n\n");
 
-  if(argc > 0)
-    {
-      for(i = 0; i < argc-1; i++)
+  for(i = 1; i < argc; i++)  // Do not need to look at the first value which is offset 0
 	{
 	 if(strcmp(argv[i], "-h") == 0 || strcmp(argv[i], "-help") == 0){
-			help = atoi(argv[i+1]); i++;}
+			help = 1;}
 	 else if(strcmp(argv[i], "-width") == 0){
 			width = atoi(argv[i+1]); i++;}
 	 else if(strcmp(argv[i], "-height") == 0){
@@ -301,7 +298,6 @@ int  main(int argc, char* argv[])
                showDetails = atoi(argv[i+1]); i++;}
 	 else if(strcmp(argv[i], "-daytime") == 0){
 	       	daytimeCapture = atoi(argv[i+1]); i++;}
-				}
   }
 
   if (help == 1) {
@@ -350,6 +346,7 @@ int  main(int argc, char* argv[])
 
 	  printf("%sUsage:\n", KRED);
 	  printf(" ./capture -width 640 -height 480 -exposure 5000000 -gamma 50 -type 1 -bin 1 -filename Lake-Laberge.PNG\n\n");
+	return 0;
   }
 	printf("%s", KNRM);
 
@@ -645,7 +642,7 @@ printf("%s",KNRM);
 				printf("\n");
 				printf("Saving auto exposed images every %d ms\n\n", daytimeDelay);
 				// Set Exposure to something low for daytime capture
-				exp_ms=32;
+				exp_ms=1000;
 				// Enable Auto-Exposure
 				ASISetControlValue(CamNum, ASI_EXPOSURE, exp_ms, ASI_TRUE);
 				ASISetControlValue(CamNum, ASI_GAIN, 0, ASI_FALSE);
